@@ -13,9 +13,13 @@
 @end
 
 @implementation ViewController
+{
+    int _currentValue; // instance variable or ivar for short
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _currentValue = 50;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,14 +30,20 @@
 
 -(IBAction)showAlert
 {
+    NSString *message = [NSString stringWithFormat:@"The value of the slider is: %d", _currentValue];
     UIAlertView *alertView = [[UIAlertView alloc]
                               initWithTitle:@"Hello World"
-                              message:@"This is my first app"
+                              message:message
                               delegate:nil
-                              cancelButtonTitle:@"Awesome"
+                              cancelButtonTitle:@"OK"
                               otherButtonTitles:nil];
     
     [alertView show];
+}
+
+- (IBAction)sliderMoved:(UISlider *)slider
+{
+    _currentValue = lroundf(slider.value);
 }
 
 @end
