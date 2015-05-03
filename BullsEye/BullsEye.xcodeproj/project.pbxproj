@@ -14,6 +14,7 @@
 		A02C68531AF5350900AAAEB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A02C68521AF5350900AAAEB0 /* Images.xcassets */; };
 		A02C68561AF5350900AAAEB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02C68541AF5350900AAAEB0 /* LaunchScreen.xib */; };
 		A02C68621AF5350900AAAEB0 /* BullsEyeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A02C68611AF5350900AAAEB0 /* BullsEyeTests.m */; };
+		A0BEDD9B1AF613AC0027F165 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BEDD9A1AF613AC0027F165 /* AboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		A02C685B1AF5350900AAAEB0 /* BullsEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02C68601AF5350900AAAEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A02C68611AF5350900AAAEB0 /* BullsEyeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BullsEyeTests.m; sourceTree = "<group>"; };
+		A0BEDD991AF613AC0027F165 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		A0BEDD9A1AF613AC0027F165 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		A02C68441AF5350900AAAEB0 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				A0BEDD991AF613AC0027F165 /* AboutViewController.h */,
+				A0BEDD9A1AF613AC0027F165 /* AboutViewController.m */,
 				A02C68491AF5350900AAAEB0 /* AppDelegate.h */,
 				A02C684A1AF5350900AAAEB0 /* AppDelegate.m */,
 				A02C684C1AF5350900AAAEB0 /* ViewController.h */,
@@ -221,6 +226,7 @@
 			files = (
 				A02C684E1AF5350900AAAEB0 /* ViewController.m in Sources */,
 				A02C684B1AF5350900AAAEB0 /* AppDelegate.m in Sources */,
+				A0BEDD9B1AF613AC0027F165 /* AboutViewController.m in Sources */,
 				A02C68481AF5350900AAAEB0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
