@@ -16,14 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"BullsEye" ofType:@"html"];
+    
+    NSData *htmlData = [NSData dataWithContentsOfFile:htmlFile];
+    
+    NSURL *baseURL = [NSURL fileURLWithPath:[
+                      [NSBundle mainBundle] bundlePath]];
+    
+    [self.webView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:baseURL];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 /*
 #pragma mark - Navigation
 
