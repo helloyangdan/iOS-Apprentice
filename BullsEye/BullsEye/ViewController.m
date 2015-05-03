@@ -15,12 +15,27 @@
 @implementation ViewController
 {
     int _currentValue; // instance variable or ivar for short
+    int _targetValue;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self startNewRound];
+    [self updateLabels];
+}
+
+
+
+- (void)startNewRound
+{
+    _targetValue = 1 + arc4random_uniform(100);
     _currentValue = 50;
-    // Do any additional setup after loading the view, typically from a nib.
+    self.slider.value = _currentValue;
+}
+
+- (void)updateLabels
+{
+    self.targetLabel.text = [NSString stringWithFormat:@"%d", _targetValue];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +45,7 @@
 
 -(IBAction)showAlert
 {
-    NSString *message = [NSString stringWithFormat:@"The value of the slider is: %d", _currentValue];
+    NSString *message = [NSString stringWithFormat:@"The value of the slider is: %d\nThe target value is:%d", _currentValue, _targetValue];
     UIAlertView *alertView = [[UIAlertView alloc]
                               initWithTitle:@"Hello World"
                               message:message
@@ -39,6 +54,9 @@
                               otherButtonTitles:nil];
     
     [alertView show];
+    
+    [self startNewRound];
+    [self updateLabels];
 }
 
 - (IBAction)sliderMoved:(UISlider *)slider
