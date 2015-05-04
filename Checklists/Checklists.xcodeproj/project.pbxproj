@@ -14,6 +14,7 @@
 		A0BEDDB81AF79C100027F165 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0BEDDB71AF79C100027F165 /* Images.xcassets */; };
 		A0BEDDBB1AF79C100027F165 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BEDDB91AF79C100027F165 /* LaunchScreen.xib */; };
 		A0BEDDC71AF79C100027F165 /* ChecklistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BEDDC61AF79C100027F165 /* ChecklistsTests.m */; };
+		A0BEDDD21AF7C0920027F165 /* ChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BEDDD11AF7C0920027F165 /* ChecklistItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		A0BEDDC01AF79C100027F165 /* ChecklistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChecklistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0BEDDC51AF79C100027F165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0BEDDC61AF79C100027F165 /* ChecklistsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChecklistsTests.m; sourceTree = "<group>"; };
+		A0BEDDD01AF7C0920027F165 /* ChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItem.h; sourceTree = "<group>"; };
+		A0BEDDD11AF7C0920027F165 /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				A0BEDDB71AF79C100027F165 /* Images.xcassets */,
 				A0BEDDB91AF79C100027F165 /* LaunchScreen.xib */,
 				A0BEDDAA1AF79C100027F165 /* Supporting Files */,
+				A0BEDDD01AF7C0920027F165 /* ChecklistItem.h */,
+				A0BEDDD11AF7C0920027F165 /* ChecklistItem.m */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				A0BEDDB31AF79C100027F165 /* ChecklistsViewController.m in Sources */,
 				A0BEDDB01AF79C100027F165 /* AppDelegate.m in Sources */,
 				A0BEDDAD1AF79C100027F165 /* main.m in Sources */,
+				A0BEDDD21AF7C0920027F165 /* ChecklistItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

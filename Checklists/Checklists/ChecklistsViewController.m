@@ -7,16 +7,50 @@
 //
 
 #import "ChecklistsViewController.h"
+#import "ChecklistItem.h"
 
 @interface ChecklistsViewController ()
 
 @end
 
 @implementation ChecklistsViewController
+{
+    NSMutableArray *_items;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    _items = [[NSMutableArray alloc] initWithCapacity:20];
+    
+    ChecklistItem *item;
+    
+    item = [[ChecklistItem alloc] init];
+    item.text = @"Walk the dog";
+    item.checked = NO;
+    [_items addObject:item];
+    
+    item = [[ChecklistItem alloc] init];
+    item.text = @"Brush my teeth";
+    item.checked = YES;
+    [_items addObject:item];
+    
+    item = [[ChecklistItem alloc] init];
+    item.text = @"Learn iOS development";
+    item.checked = YES;
+    [_items addObject:item];
+    
+    item = [[ChecklistItem alloc] init];
+    item.text = @"Soccer practice";
+    item.checked = NO;
+    [_items addObject:item];
+    
+    item = [[ChecklistItem alloc] init];
+    item.text = @"Eat ice cream";
+    item.checked = YES;
+    [_items addObject:item];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,39 +60,41 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 100;
+    return [_items count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChecklistItem"];
     
-    UILabel *label = (UILabel *)[cell viewWithTag:1000];
     
-    if (indexPath.row==0) {
-        label.text = @"Walk the dog";
-    }else if (indexPath.row == 1) {
-        label.text = @"Brush my teeth";
-    }else if (indexPath.row == 2) {
-        label.text = @"Learn iOS development";
-    }else if (indexPath.row == 3) {
-        label.text = @"Soccer practice";
-    }else if (indexPath.row == 4) {
-        label.text = @"Eat ice cream";
-    }
+    ChecklistItem *item = _items[indexPath.row];
+    
+    UILabel *label = (UILabel *)[cell viewWithTag:1000];
+    label.text = item.text;
+    
+    [self configureCheckmarkForCell:cell withChecklistItem:item];
     
     return cell;
+}
+
+- (void)configureCheckmarkForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item
+{
+    if(item.checked) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    if (cell.accessoryType == UITableViewCellAccessoryNone) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
+    ChecklistItem *item = _items[indexPath.row];
+    [item toggleChecked];
+    
+    [self configureCheckmarkForCell:cell withChecklistItem:item];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
