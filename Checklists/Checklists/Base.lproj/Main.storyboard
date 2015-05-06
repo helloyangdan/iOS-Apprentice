@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="YgJ-4K-NIL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bwq-b6-U3d">
                             <connections>
-                                <action selector="addItem" destination="eRL-Dn-TW0" id="jqx-E4-a1u"/>
+                                <segue destination="pw6-it-d3z" kind="modal" identifier="AddItem" id="MMN-wV-g4H"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -47,6 +47,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2f-QA-QsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="672" y="326"/>
+        </scene>
+        <!--Add Item-->
+        <scene sceneID="ua5-MQ-vg8">
+            <objects>
+                <tableViewController id="BLI-tG-6By" customClass="AddItemViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="t1e-M4-kwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Xfj-8L-flq">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="lHB-O3-MRP">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lHB-O3-MRP" id="uTb-ZT-vcX">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Item" adjustsFontSizeToFit="NO" minimumFontSize="17" id="wPq-mF-PS8">
+                                                    <rect key="frame" x="26" y="8" width="269" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done" destination="BLI-tG-6By" eventType="editingDidEndOnExit" id="MMT-Lw-cDu"/>
+                                                        <outlet property="delegate" destination="BLI-tG-6By" id="e9f-yX-xFk"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="BLI-tG-6By" id="WnV-Fb-QGA"/>
+                            <outlet property="delegate" destination="BLI-tG-6By" id="78a-mM-BCt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Item" id="wqe-uW-nY7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0Pc-O9-vyb">
+                            <connections>
+                                <action selector="cancel" destination="BLI-tG-6By" id="NmX-Iz-4dp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="UkX-fZ-ozS">
+                            <connections>
+                                <action selector="done" destination="BLI-tG-6By" id="QDu-rs-l7g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneBarButton" destination="UkX-fZ-ozS" id="ODw-0Z-wUF"/>
+                        <outlet property="textField" destination="wPq-mF-PS8" id="WTk-R6-EgR"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFi-AO-4WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1675" y="326"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Puw-FM-Oj5">
@@ -65,6 +125,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPh-cW-9DK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="326"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PHH-EY-kAG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pw6-it-d3z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1BD-9C-DnC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BLI-tG-6By" kind="relationship" relationship="rootViewController" id="rRa-Vc-5rJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6h2-YK-Fvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="326"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
