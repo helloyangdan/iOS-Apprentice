@@ -1,28 +1,28 @@
 //
-//  AddItemViewController.m
+//  itemDetailViewController.m
 //  Checklists
 //
 //  Created by danyang on 15/5/5.
 //  Copyright (c) 2015年 dan yang. All rights reserved.
 //
 
-#import "AddItemViewController.h"
+#import "ItemDetailViewController.h"
 #import "ChecklistItem.h"
 
-@interface AddItemViewController ()
+@interface ItemDetailViewController ()
 
 @end
 
-@implementation AddItemViewController
+@implementation ItemDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (self.itemToEdit != nil) {
+        self.title = @"Edit Item";
+        self.textField.text = self.itemToEdit.text;
+        self.doneBarButton.enabled = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,16 +39,22 @@
 
 - (IBAction)cancel
 {
-    [self.delegate addItemViewControllerDidCancel:self];
+    [self.delegate itemDetailViewControllerDidCancel:self];
 }
 
 - (IBAction)done
 {
-    ChecklistItem *item = [[ChecklistItem alloc] init];
-    item.text = self.textField.text;
-    item.checked = NO;
-    
-    [self.delegate addItemViewController:self didFinishAddingItem:item];
+    if (self.itemToEdit == nil) {
+        ChecklistItem *item = [[ChecklistItem alloc] init];
+        item.text = self.textField.text;
+        item.checked = NO;
+        
+        [self.delegate itemDetailViewController:self didFinishAddingItem:item];
+    } else {
+        self.itemToEdit.text = self.textField.text;
+        [self.delegate itemDetailViewController:self didFinishEditingItem:self.itemToEdit];
+    }
+
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath

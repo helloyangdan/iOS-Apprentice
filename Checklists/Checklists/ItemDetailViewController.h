@@ -1,0 +1,35 @@
+//
+//  IitemDetailViewController.h
+//  Checklists
+//
+//  Created by danyang on 15/5/5.
+//  Copyright (c) 2015年 dan yang. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@class ItemDetailViewController;
+@class ChecklistItem;
+
+@protocol ItemDetailViewControllerDelegate <NSObject>
+
+- (void)itemDetailViewControllerDidCancel:(ItemDetailViewController *)controller;
+
+- (void)itemDetailViewController:(ItemDetailViewController *)controller didFinishAddingItem:(ChecklistItem *)item;
+
+- (void)itemDetailViewController:(ItemDetailViewController *)controller didFinishEditingItem:(ChecklistItem *)item;
+
+@end
+
+
+@interface ItemDetailViewController : UITableViewController<UITextFieldDelegate>
+
+@property (nonatomic, weak) id <ItemDetailViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneBarButton;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic, strong) ChecklistItem *itemToEdit;
+
+- (IBAction)cancel;
+- (IBAction)done;
+
+@end
