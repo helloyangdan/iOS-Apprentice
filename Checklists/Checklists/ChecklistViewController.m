@@ -60,7 +60,8 @@
 - (void)configureTextForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item
 {
     UILabel *label = (UILabel *)[cell viewWithTag:1000];
-    label.text = item.text;
+//    label.text = item.text;
+    label.text = [NSString stringWithFormat:@"%ld: %@", (long)item.itemId, item.text];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

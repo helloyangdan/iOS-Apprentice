@@ -22,6 +22,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+//    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:10];
+//    
+//    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//    localNotification.fireDate = date;
+//    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+//    localNotification.alertBody = @"I am a local notification";
+//    localNotification.soundName = UILocalNotificationDefaultSoundName;
+//    
+//    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+//    
+//    // user choose if or not permit the locatification
+//    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+//        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound|UIUserNotificationTypeBadge categories:nil]];
+//    }
+    
+    
     _dataModel = [[DataModel alloc] init];
     
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
@@ -30,6 +47,11 @@
     controller.dataModel = _dataModel;
     
     return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    NSLog(@"didReceiveLocalNotification %@", notification);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

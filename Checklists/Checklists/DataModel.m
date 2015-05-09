@@ -11,6 +11,16 @@
 
 @implementation DataModel
 
++ (int)nextChecklistItemId
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSInteger itemId = [userDefaults integerForKey:@"ChecklistItemId"];
+    
+    [userDefaults setInteger:itemId+1 forKey:@"ChecklistItemId"];
+    [userDefaults synchronize];
+    return itemId;
+}
+
 - (void)handleFirstTime
 {
     BOOL firstTime = [[NSUserDefaults standardUserDefaults] boolForKey:@"FirstTime"];
@@ -73,7 +83,7 @@
 
 - (void)registerDefauls
 {
-    NSDictionary *dictionary = @{ @"ChecklistIndex" : @-1, @"FirstTime" : @YES };
+    NSDictionary *dictionary = @{ @"ChecklistIndex" : @-1, @"FirstTime" : @YES, @"ChecklistItemId" : @0 };
     [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
 }
 
