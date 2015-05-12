@@ -259,7 +259,7 @@
                             <tableViewSection id="VXo-fk-9gq">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="2Hn-My-ElR">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Hn-My-ElR" id="Yai-PW-Aid">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -283,7 +283,7 @@
                             <tableViewSection id="k6w-4f-TUv">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="snQ-Yu-PPu">
-                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="snQ-Yu-PPu" id="0k3-6a-Bkc">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -346,7 +346,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IconCell" textLabel="OnA-nW-IPv" style="IBUITableViewCellStyleDefault" id="o67-Z6-A6y">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o67-Z6-A6y" id="DDN-YO-8xL">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
