@@ -16,6 +16,8 @@
 		A02CA4621AFFBCE5008A275E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02CA4601AFFBCE5008A275E /* LaunchScreen.xib */; };
 		A02CA46E1AFFBCE5008A275E /* MyLocationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A02CA46D1AFFBCE5008A275E /* MyLocationsTests.m */; };
 		A02CA4781AFFC111008A275E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02CA4771AFFC111008A275E /* CoreLocation.framework */; };
+		A02CA47B1B025118008A275E /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02CA47A1B025118008A275E /* LocationDetailsViewController.m */; };
+		A02CA47F1B03A47F008A275E /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02CA47E1B03A47F008A275E /* CategoryPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,10 @@
 		A02CA46C1AFFBCE5008A275E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A02CA46D1AFFBCE5008A275E /* MyLocationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocationsTests.m; sourceTree = "<group>"; };
 		A02CA4771AFFC111008A275E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A02CA4791B025118008A275E /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailsViewController.h; sourceTree = "<group>"; };
+		A02CA47A1B025118008A275E /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailsViewController.m; sourceTree = "<group>"; };
+		A02CA47D1B03A47F008A275E /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
+		A02CA47E1B03A47F008A275E /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,10 @@
 				A02CA45E1AFFBCE5008A275E /* Images.xcassets */,
 				A02CA4601AFFBCE5008A275E /* LaunchScreen.xib */,
 				A02CA44E1AFFBCE4008A275E /* Supporting Files */,
+				A02CA4791B025118008A275E /* LocationDetailsViewController.h */,
+				A02CA47A1B025118008A275E /* LocationDetailsViewController.m */,
+				A02CA47D1B03A47F008A275E /* CategoryPickerViewController.h */,
+				A02CA47E1B03A47F008A275E /* CategoryPickerViewController.m */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -232,6 +242,8 @@
 				A02CA4541AFFBCE5008A275E /* AppDelegate.m in Sources */,
 				A02CA4571AFFBCE5008A275E /* CurrentLocationViewController.m in Sources */,
 				A02CA4511AFFBCE5008A275E /* main.m in Sources */,
+				A02CA47F1B03A47F008A275E /* CategoryPickerViewController.m in Sources */,
+				A02CA47B1B025118008A275E /* LocationDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,8 +369,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MyLocations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -367,8 +381,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MyLocations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
