@@ -9,6 +9,8 @@
 #import "CurrentLocationViewController.h"
 #import "LocationDetailsViewController.h"
 
+
+
 @interface CurrentLocationViewController ()
 
 @end
@@ -71,6 +73,7 @@
         
         controller.coordinate = _location.coordinate;
         controller.placemark = _placemark;
+        controller.managedObjectContext = self.managedObjectContext;
         
     }
 }

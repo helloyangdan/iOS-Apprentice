@@ -9,6 +9,10 @@
 #import "LocationDetailsViewController.h"
 #import "CategoryPickerViewController.h"
 #import "HudView.h"
+#import "Location.h"
+
+//
+//NSString * const ManagedObjectContextSaveDidFailNotification = @"ManagedObjectContextSaveDidFailNotification";
 
 @interface LocationDetailsViewController () <UITextViewDelegate>
 
@@ -25,6 +29,8 @@
 {
     NSString *_descriptionText;
     NSString *_categoryName;
+    NSDate *_date;
+    
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -32,6 +38,7 @@
     if ((self = [super initWithCoder:aDecoder])) {
         _descriptionText = @"";
         _categoryName = @"No Category";
+        _date = [NSDate date];
     }
     return self;
 }
@@ -76,7 +83,7 @@
     return [NSString stringWithFormat:@"%@ %@,%@, %@ %@, %@", placemark.subThoroughfare, placemark.thoroughfare, placemark.locality, placemark.administrativeArea, placemark.postalCode, placemark.country];
 }
 
-- (NSString *)formatDate:(NSData *)theDate
+- (NSString *)formatDate:(NSDate *)theDate
 {
     static NSDateFormatter *formatter = nil;
     if (formatter == nil) {
@@ -97,6 +104,24 @@
 {
     HudView *hudView = [HudView hudInView:self.navigationController.view animated:YES];
     hudView.text = @"Tagged";
+    
+    Location *location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+    
+    location.locationDescription = _descriptionText;
+    location.category = _categoryName;
+    location.latitude = @(self.coordinate.latitude);
+    location.longitude = @(self.coordinate.longitude);
+    location.date = _date;
+    location.placemark = self.placemark;
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"*** Fatal error in %s:%d\n%@\n%@",
+              __FILE__, __LINE__, error, [error userInfo]);
+//        [[NSNotificationCenter defaultCenter] postNotificationName: ManagedObjectContextSaveDidFailNotification object:error];
+//        FATAL_CORE_DATA_ERROR(error);
+        abort();
+    }
     
     [self performSelector:@selector(closeScreen) withObject:nil afterDelay:0.6];
 }
