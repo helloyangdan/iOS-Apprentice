@@ -22,6 +22,8 @@
 		A02CA4841B03C6B8008A275E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02CA4831B03C6B8008A275E /* CoreData.framework */; };
 		A02CA4871B03C6F5008A275E /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A02CA4851B03C6F5008A275E /* DataModel.xcdatamodeld */; };
 		A02CA48D1B03C9E9008A275E /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = A02CA48C1B03C9E9008A275E /* Location.m */; };
+		A046D5D91B085CCB00DB3881 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A046D5D81B085CCB00DB3881 /* LocationsViewController.m */; };
+		A0E87DBD1B0865C5001B2B0B /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E87DBC1B0865C5001B2B0B /* LocationCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		A02CA48B1B03C9E9008A275E /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		A02CA48C1B03C9E9008A275E /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		A046D5D01B07149000DB3881 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A046D5D71B085CCB00DB3881 /* LocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
+		A046D5D81B085CCB00DB3881 /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
+		A0E87DBB1B0865C5001B2B0B /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
+		A0E87DBC1B0865C5001B2B0B /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,10 @@
 				A02CA48B1B03C9E9008A275E /* Location.h */,
 				A02CA48C1B03C9E9008A275E /* Location.m */,
 				A046D5D01B07149000DB3881 /* PrefixHeader.pch */,
+				A046D5D71B085CCB00DB3881 /* LocationsViewController.h */,
+				A046D5D81B085CCB00DB3881 /* LocationsViewController.m */,
+				A0E87DBB1B0865C5001B2B0B /* LocationCell.h */,
+				A0E87DBC1B0865C5001B2B0B /* LocationCell.m */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -264,7 +274,9 @@
 				A02CA48D1B03C9E9008A275E /* Location.m in Sources */,
 				A02CA4511AFFBCE5008A275E /* main.m in Sources */,
 				A02CA4821B03AD86008A275E /* HudView.m in Sources */,
+				A046D5D91B085CCB00DB3881 /* LocationsViewController.m in Sources */,
 				A02CA47F1B03A47F008A275E /* CategoryPickerViewController.m in Sources */,
+				A0E87DBD1B0865C5001B2B0B /* LocationCell.m in Sources */,
 				A02CA47B1B025118008A275E /* LocationDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
