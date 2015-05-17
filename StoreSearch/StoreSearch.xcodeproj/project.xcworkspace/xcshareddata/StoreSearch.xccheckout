@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E8114D64-1066-4EB0-BE75-EC3A987A2FCE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>710D6D4AD67BF8AE98BE07616B2C924DD3390171</key>
+		<string>https://github.com/helloyangdan/iOS-Apprentice.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>StoreSearch/StoreSearch.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>710D6D4AD67BF8AE98BE07616B2C924DD3390171</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/helloyangdan/iOS-Apprentice.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>710D6D4AD67BF8AE98BE07616B2C924DD3390171</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>710D6D4AD67BF8AE98BE07616B2C924DD3390171</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-Apprentice</string>
+		</dict>
+	</array>
+</dict>
+</plist>
