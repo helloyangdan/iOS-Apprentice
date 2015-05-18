@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E8114D64-1066-4EB0-BE75-EC3A987A2FCE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>StoreSearch</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>710D6D4AD67BF8AE98BE07616B2C924DD3390171</key>
 		<string>https://github.com/helloyangdan/iOS-Apprentice.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>StoreSearch/StoreSearch.xcodeproj/project.xcworkspace</string>
+	<string>StoreSearch/StoreSearch.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>710D6D4AD67BF8AE98BE07616B2C924DD3390171</key>
