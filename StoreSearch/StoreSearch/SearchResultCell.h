@@ -14,4 +14,5 @@
 @property (nonatomic, weak) IBOutlet UILabel *artistNameLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *artworkImageView;
 
+
 @end
