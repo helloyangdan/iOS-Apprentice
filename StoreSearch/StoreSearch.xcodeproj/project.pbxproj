@@ -10,6 +10,7 @@
 		A0D9D75C1B0A40F800B78163 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D9D75B1B0A40F800B78163 /* SearchResultCell.xib */; };
 		A0D9D75F1B0A42E900B78163 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D9D75E1B0A42E900B78163 /* SearchResultCell.m */; };
 		A0D9D7611B0A453000B78163 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D9D7601B0A453000B78163 /* NothingFoundCell.xib */; };
+		A0D9D7631B0B89A100B78163 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D9D7621B0B89A100B78163 /* LoadingCell.xib */; };
 		A0E87DD21B08A4A2001B2B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E87DD11B08A4A2001B2B0B /* main.m */; };
 		A0E87DD51B08A4A2001B2B0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E87DD41B08A4A2001B2B0B /* AppDelegate.m */; };
 		A0E87DDD1B08A4A2001B2B0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E87DDC1B08A4A2001B2B0B /* Images.xcassets */; };
@@ -35,6 +36,7 @@
 		A0D9D75D1B0A42E900B78163 /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
 		A0D9D75E1B0A42E900B78163 /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
 		A0D9D7601B0A453000B78163 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		A0D9D7621B0B89A100B78163 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		A0E87DCC1B08A4A2001B2B0B /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E87DD01B08A4A2001B2B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0E87DD11B08A4A2001B2B0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				A0D9D75D1B0A42E900B78163 /* SearchResultCell.h */,
 				A0D9D75E1B0A42E900B78163 /* SearchResultCell.m */,
 				A0D9D7601B0A453000B78163 /* NothingFoundCell.xib */,
+				A0D9D7621B0B89A100B78163 /* LoadingCell.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				A0E87DE01B08A4A2001B2B0B /* LaunchScreen.xib in Resources */,
 				A0E87DDD1B08A4A2001B2B0B /* Images.xcassets in Resources */,
+				A0D9D7631B0B89A100B78163 /* LoadingCell.xib in Resources */,
 				A0D9D75C1B0A40F800B78163 /* SearchResultCell.xib in Resources */,
 				A0D9D7611B0A453000B78163 /* NothingFoundCell.xib in Resources */,
 				A0E87DF91B08A581001B2B0B /* SearchViewController.xib in Resources */,
