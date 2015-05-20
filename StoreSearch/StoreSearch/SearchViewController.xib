@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
             <connections>
                 <outlet property="searchBar" destination="BLy-Us-a1j" id="caZ-W0-SmQ"/>
+                <outlet property="segmentedControl" destination="Xd7-Cz-gyA" id="dXy-Zw-c4A"/>
                 <outlet property="tableView" destination="aKg-Bj-aK6" id="4Aa-6Q-OPI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,6 +32,27 @@
                         <outlet property="delegate" destination="-1" id="Efj-WE-SGV"/>
                     </connections>
                 </searchBar>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSJ-h9-ool">
+                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                    <items>
+                        <navigationItem id="1VM-f6-2lq">
+                            <nil key="title"/>
+                            <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Xd7-Cz-gyA">
+                                <rect key="frame" x="10" y="8" width="300" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Music"/>
+                                    <segment title="Software"/>
+                                    <segment title="E-Books"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="-1" eventType="valueChanged" id="h2c-yV-wYh"/>
+                                </connections>
+                            </segmentedControl>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
