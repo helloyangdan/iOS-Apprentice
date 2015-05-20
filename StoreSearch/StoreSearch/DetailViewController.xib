@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
+            <connections>
+                <outlet property="artistNameLabel" destination="Bxw-fI-j93" id="aLe-qj-MYK"/>
+                <outlet property="artworkImageView" destination="IyZ-8A-0SN" id="BZr-0c-uvZ"/>
+                <outlet property="genreLabel" destination="fCf-xw-0DK" id="FdK-P2-Cpf"/>
+                <outlet property="kindLabel" destination="8bS-MZ-MK8" id="eUc-hE-mAG"/>
+                <outlet property="nameLabel" destination="BsV-Hg-Xyx" id="6NS-fd-mCp"/>
+                <outlet property="popupView" destination="v8Z-D6-O24" id="Vbc-YR-547"/>
+                <outlet property="priceButton" destination="KM4-yB-Rin" id="dX1-pL-IjR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="GradientView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8Z-D6-O24" userLabel="Popup View">
+                    <rect key="frame" x="40" y="154" width="240" height="260"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83s-6K-cwm" userLabel="Close Button">
+                            <rect key="frame" x="3" y="0.0" width="15" height="22"/>
+                            <state key="normal" image="CloseButton"/>
+                            <connections>
+                                <action selector="close:" destination="-1" eventType="touchUpInside" id="Yjv-eB-Ra9"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IyZ-8A-0SN">
+                            <rect key="frame" x="70" y="9" width="100" height="100"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="BsV-Hg-Xyx">
+                            <rect key="frame" x="10" y="110" width="220" height="48"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxw-fI-j93">
+                            <rect key="frame" x="10" y="158" width="220" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLJ-hB-P65">
+                            <rect key="frame" x="10" y="181" width="43" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="highlightedColor" white="1" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kind Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bS-MZ-MK8">
+                            <rect key="frame" x="70" y="181" width="160" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genre:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay4-eo-OcG">
+                            <rect key="frame" x="10" y="204" width="52" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genre Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCf-xw-0DK">
+                            <rect key="frame" x="70" y="204" width="160" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM4-yB-Rin">
+                            <rect key="frame" x="174" y="230" width="60" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="JHH-ND-eqU"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="Ydf-B0-SRf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                            <state key="normal" title="$9.99">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="openInStore:" destination="-1" eventType="touchUpInside" id="vCA-ve-GcC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.95999999999999996" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KM4-yB-Rin" secondAttribute="trailing" constant="6" id="4PE-XC-f2i"/>
+                        <constraint firstAttribute="bottom" secondItem="KM4-yB-Rin" secondAttribute="bottom" constant="6" id="Dq4-zi-NFv"/>
+                        <constraint firstAttribute="height" constant="260" id="eDJ-so-4M2"/>
+                        <constraint firstAttribute="width" constant="240" id="eGg-9b-65I"/>
+                        <constraint firstAttribute="trailing" secondItem="KM4-yB-Rin" secondAttribute="trailing" constant="6" id="gl9-AO-etn"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KM4-yB-Rin" secondAttribute="bottom" constant="6" id="zDR-wV-O02"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.47999999999999998" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="v8Z-D6-O24" secondAttribute="centerY" id="DPs-HF-wvA"/>
+                <constraint firstAttribute="centerX" secondItem="v8Z-D6-O24" secondAttribute="centerX" id="zXd-oA-v4k"/>
+            </constraints>
+            <point key="canvasLocation" x="245" y="340"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CloseButton" width="15" height="15"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

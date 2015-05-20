@@ -12,6 +12,9 @@
 		A0D9D75F1B0A42E900B78163 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D9D75E1B0A42E900B78163 /* SearchResultCell.m */; };
 		A0D9D7611B0A453000B78163 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D9D7601B0A453000B78163 /* NothingFoundCell.xib */; };
 		A0D9D7631B0B89A100B78163 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D9D7621B0B89A100B78163 /* LoadingCell.xib */; };
+		A0D9D7671B0CC84E00B78163 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D9D7651B0CC84E00B78163 /* DetailViewController.m */; };
+		A0D9D7681B0CC84E00B78163 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D9D7661B0CC84E00B78163 /* DetailViewController.xib */; };
+		A0D9D76B1B0CD8D800B78163 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D9D76A1B0CD8D800B78163 /* GradientView.m */; };
 		A0E87DD21B08A4A2001B2B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E87DD11B08A4A2001B2B0B /* main.m */; };
 		A0E87DD51B08A4A2001B2B0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E87DD41B08A4A2001B2B0B /* AppDelegate.m */; };
 		A0E87DDD1B08A4A2001B2B0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E87DDC1B08A4A2001B2B0B /* Images.xcassets */; };
@@ -40,6 +43,11 @@
 		A0D9D75E1B0A42E900B78163 /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
 		A0D9D7601B0A453000B78163 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		A0D9D7621B0B89A100B78163 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		A0D9D7641B0CC84E00B78163 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A0D9D7651B0CC84E00B78163 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A0D9D7661B0CC84E00B78163 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		A0D9D7691B0CD8D800B78163 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		A0D9D76A1B0CD8D800B78163 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		A0E87DCC1B08A4A2001B2B0B /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E87DD01B08A4A2001B2B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0E87DD11B08A4A2001B2B0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -123,6 +131,11 @@
 				A0D9D75E1B0A42E900B78163 /* SearchResultCell.m */,
 				A0D9D7601B0A453000B78163 /* NothingFoundCell.xib */,
 				A0D9D7621B0B89A100B78163 /* LoadingCell.xib */,
+				A0D9D7641B0CC84E00B78163 /* DetailViewController.h */,
+				A0D9D7651B0CC84E00B78163 /* DetailViewController.m */,
+				A0D9D7661B0CC84E00B78163 /* DetailViewController.xib */,
+				A0D9D7691B0CD8D800B78163 /* GradientView.h */,
+				A0D9D76A1B0CD8D800B78163 /* GradientView.m */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -246,6 +259,7 @@
 			files = (
 				A0E87DE01B08A4A2001B2B0B /* LaunchScreen.xib in Resources */,
 				A0E87DDD1B08A4A2001B2B0B /* Images.xcassets in Resources */,
+				A0D9D7681B0CC84E00B78163 /* DetailViewController.xib in Resources */,
 				A0D9D7631B0B89A100B78163 /* LoadingCell.xib in Resources */,
 				A0D9D75C1B0A40F800B78163 /* SearchResultCell.xib in Resources */,
 				A0D9D7611B0A453000B78163 /* NothingFoundCell.xib in Resources */,
@@ -305,6 +319,8 @@
 				A0D9D75F1B0A42E900B78163 /* SearchResultCell.m in Sources */,
 				A0E87DFC1B08ACE4001B2B0B /* SearchResult.m in Sources */,
 				A0E87DD21B08A4A2001B2B0B /* main.m in Sources */,
+				A0D9D76B1B0CD8D800B78163 /* GradientView.m in Sources */,
+				A0D9D7671B0CC84E00B78163 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
